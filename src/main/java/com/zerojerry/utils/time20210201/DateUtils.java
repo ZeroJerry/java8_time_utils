@@ -1,10 +1,11 @@
-package com.zerojerry.utils.time;
+package com.zerojerry.utils.time20210201;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
+
+import static com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.ZONE_ID_SH;
 
 /**
  * @Description 把Date转为JDK1.8的时间类的 工具类
@@ -12,13 +13,10 @@ import java.util.Date;
  * @Date 2019/7/12 17:08
  * @Version 1.0
  */
-public class TransformDateUtils {
-    private TransformDateUtils() {
+public class DateUtils {
+    private DateUtils() {
         throw new IllegalStateException("Utility class");
     }
-
-    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     /**
      * Date转为LocalDateTime
@@ -40,7 +38,16 @@ public class TransformDateUtils {
      * @return
      */
     public static Date convertLdt2Date(LocalDateTime localDateTime) {
-        return Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+        return Date.from(localDateTime.atZone(ZONE_ID_SH).toInstant());
+    }
+
+    /**
+     * java.util.Date转秒级Unix时间戳
+     *
+     * @return
+     */
+    public static Long date2Second(Date date) {
+        return date.getTime() / 1000;
     }
 
 }
