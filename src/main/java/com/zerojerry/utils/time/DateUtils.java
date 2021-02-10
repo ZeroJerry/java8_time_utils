@@ -1,15 +1,16 @@
-package com.zerojerry.utils.time20210201;
+package com.zerojerry.utils.time;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 
-import static com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.ZONE_ID_SH;
+import static com.zerojerry.utils.time.LocalDateTimeUtils.ZONE_ID_SH;
+
 
 /**
  * @Description 把Date转为JDK1.8的时间类的 工具类
- * @Author ZeroJerry66
+ * @Author ZeroJerry
  * @Date 2019/7/12 17:08
  * @Version 1.0
  */

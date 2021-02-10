@@ -1,4 +1,4 @@
-package com.zerojerry.utils.time20210201;
+package com.zerojerry.utils.time;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * @Description LocalTime的简单时间工具
  * @Date 2020/8/5 19:12
- * @Author 张俊力
+ * @Author ZeroJerry
  * @Version 1.0
  */
 public class LocalTimeUtils {
@@ -20,7 +20,7 @@ public class LocalTimeUtils {
      * @return
      */
     public static String getCurrentTimeStr() {
-        return LocalTime.now().format(com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.TIME_FORMATTER);
+        return LocalTime.now().format(LocalDateTimeUtils.TIME_FORMATTER);
     }
 
     public static String getCurrentTimeStr(String pattern) {
@@ -49,10 +49,10 @@ public class LocalTimeUtils {
      * @return
      */
     public static LocalTime parseLocalTime(String timeStr) {
-        return LocalTime.parse(timeStr, com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.TIME_FORMATTER);
+        return LocalTime.parse(timeStr, LocalDateTimeUtils.TIME_FORMATTER);
     }
 
     public static String formatLocalTime(LocalTime time) {
-        return time.format(com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.TIME_FORMATTER);
+        return time.format(LocalDateTimeUtils.TIME_FORMATTER);
     }
 }

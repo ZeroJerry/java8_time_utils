@@ -1,4 +1,4 @@
-package com.zerojerry.utils.time20210201;
+package com.zerojerry.utils.time;
 
 import java.time.DayOfWeek;
 import java.time.Duration;
@@ -10,7 +10,7 @@ import java.util.stream.LongStream;
 /**
  * @Description 工作日工作分钟数计算。
  * @Date 2021/1/19 22:04
- * @Author 张俊力
+ * @Author ZeroJerry
  * @Version 1.0
  */
 public class WorkingMinutesCalculatorUtils {

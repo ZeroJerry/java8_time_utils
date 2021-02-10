@@ -1,4 +1,4 @@
-package com.zerojerry.utils.time20210201;
+package com.zerojerry.utils.time;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -9,7 +9,7 @@ import java.time.temporal.Temporal;
 /**
  * @Description LocalDateTime的简单时间工具
  * @Date 2020/8/5 17:51
- * @Author 张俊力
+ * @Author ZeroJerry
  * @Version 1.0
  */
 public class LocalDateTimeUtils {
@@ -56,7 +56,6 @@ public class LocalDateTimeUtils {
     public static String getCurrentDateTimeStr(String pattern) {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern(pattern));
     }
-
 
     /**
      * 字符串转时间（LocalDateTime）。

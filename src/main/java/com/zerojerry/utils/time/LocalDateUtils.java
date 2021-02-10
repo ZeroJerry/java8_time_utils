@@ -1,4 +1,4 @@
-package com.zerojerry.utils.time20210201;
+package com.zerojerry.utils.time;
 
 import java.time.Instant;
 import java.time.LocalDate;
@@ -7,7 +7,8 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
-import static com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.ZONE_ID_SH;
+import static com.zerojerry.utils.time.LocalDateTimeUtils.ZONE_ID_SH;
+
 
 public class LocalDateUtils {
     private LocalDateUtils() {
@@ -20,7 +21,7 @@ public class LocalDateUtils {
      * @return
      */
     public static String getCurrentDateStr() {
-        return LocalDate.now().format(com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.DATE_FORMATTER);
+        return LocalDate.now().format(LocalDateTimeUtils.DATE_FORMATTER);
     }
 
     /**
@@ -29,7 +30,7 @@ public class LocalDateUtils {
      * @return
      */
     public static String getCurrentMonthStr() {
-        return LocalDate.now().format(com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.MONTH_FORMATTER);
+        return LocalDate.now().format(LocalDateTimeUtils.MONTH_FORMATTER);
     }
 
     /**
@@ -38,7 +39,7 @@ public class LocalDateUtils {
      * @return
      */
     public static String getCurrentShortDateStr() {
-        return LocalDate.now().format(com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.SHORT_DATE_FORMATTER);
+        return LocalDate.now().format(LocalDateTimeUtils.SHORT_DATE_FORMATTER);
     }
 
     public static String getCurrentDateStr(String pattern) {
@@ -61,7 +62,7 @@ public class LocalDateUtils {
     }
 
     public static LocalDate parseLocalDate(String dateStr) {
-        return LocalDate.parse(dateStr, com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.DATE_FORMATTER);
+        return LocalDate.parse(dateStr, LocalDateTimeUtils.DATE_FORMATTER);
     }
 
     /**
@@ -107,7 +108,7 @@ public class LocalDateUtils {
     }
 
     public static String formatLocalDate(LocalDate date) {
-        return date.format(com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.DATE_FORMATTER);
+        return date.format(LocalDateTimeUtils.DATE_FORMATTER);
     }
 
     /**

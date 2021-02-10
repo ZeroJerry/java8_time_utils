@@ -1,4 +1,4 @@
-package main.java.com.zerojerry.utils.time20210201;
+package com.zerojerry.utils.time;
 
 import java.sql.Timestamp;
 import java.time.*;
@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 /**
  * @Description 在Java中仅计算两个日期之间的工作时间（不包括周末）。参考：https://www.it1352.com/2037884.html
  * @Date 2021/1/19 22:04
- * @Author 张俊力
+ * @Author ZeroJerry
  * @Version 1.0
  */
 public class WorkingMinutesCalculator {
@@ -79,7 +79,6 @@ public class WorkingMinutesCalculator {
     }
 
     /**
-     *
      * @param time LocalDateTime
      * @return
      */

@@ -1,7 +1,7 @@
-package com.zerojerry.utils.time20210201;
+package com.zerojerry.utils.time;
 
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.math.BigDecimal;
 import java.time.*;
@@ -11,9 +11,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-import static com.douyu.wsd.hr.admin.human.client.util.time.LocalDateTimeUtils.ZONE_ID_SH;
+import static com.zerojerry.utils.time.LocalDateTimeUtils.ZONE_ID_SH;
 
-@Slf4j
 public class TimeUtils {
 
     public static BigDecimal daySeconds = new BigDecimal(24 * 3600);
@@ -133,7 +132,6 @@ public class TimeUtils {
             LocalDate localDate = LocalDate.parse(dateString, formatter);
             return localDate2Second(localDate);
         } catch (Exception e) {
-            log.error("日期字符串解析异常,待解析字符串：{}, 解析格式：{}", dateString, formatString);
             return null;
         }
     }
